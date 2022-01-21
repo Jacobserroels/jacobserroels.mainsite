@@ -5,24 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>Jacob Serroels Design Philosophy Page</title>
+<link rel="stylesheet" href="../STYLESHEETS/animations.css" />
 <link rel="stylesheet" href="../STYLESHEETS/main.css" />
-<link rel="stylesheet" href="/STYLESHEETS/designPhilsophyAnimations.css" />
+<script defer src="../ASSETS/SCRIPTS/pauseDesignPhilosophyScript.js"></script>
 </head>
 <body>
+	<object data="../ASSETS/SVG/standalone/design%20philosophy%20svg%20animation.js" width="5300" height="500"></object>
 	<h1 class="Go_To_Portfolio"><a href="../index.html">go to portfolio</a></h1>
-	<div id="designPhilosphyTitleSyle"><h1 class="Title_Syling"><span id="fancyStartLetters">D</span>esign philosoph<span id="fancyEndLetters">y</span></h1></div>
+<!--	<div id="designPhilosphyTitleSyle"><h1 class="Title_Syling"><span id="fancyStartLetters">D</span>esign philosoph<span id="fancyEndLetters">y</span></h1></div>--><div id="designPhilosphyTitleSyle"><h1 class="Title_Syling">
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player src="https://assets7.lottiefiles.com/packages/lf20_csbix2qq.json"  background="transparent"  speed="1"  autoplay></lottie-player></h1></div>
 	<div class ="Body_Text">
 		<div class = "arrowAnimation">
-			<div id="Arrow 1">
-				<a id="fucntionText">function</a>
-			</div>
-			<div id="Arrow 2">
-				<a id="formText">form</a>
-			</div>
-			<div id="Arrow 3">
-				<a id="feelText">feel</a>
+<!--			<img id="circleOfArrows" alt="circle of arrows" src="../ASSETS/IMAGES/8x/allArrows@8x.png">-->
+			<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+			<lottie-player id="circleOfArrows" src="https://assets10.lottiefiles.com/packages/lf20_vxkbzhqk.json" background="transparent"   speed="1" autoplay></lottie-player>
+			<div id="arrowTextAnimation">
+		 	 <div data-modal-target="#feelModal" id="feelText">feel</div>
+		 	 <div data-modal-target="#functionModal" id="functionText">function</div>
+		  		<div data-modal-target="#formModal" id="formText">form</div>
 			</div>
 		</div>
 	</div>
+	<div data-modal-content class="modal" id="formModal">
+		<div class="modalHeader"><div class="modalTitleText">Form Explained</div><button class="modalCloseButton" data-close-button>&times;</button></div>
+		<div class="modalBody">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+		</div>
+	</div>
+	<div data-modal-content class="modal" id="feelModal">
+	<div class="modalHeader"><div class="modalTitleText">Feel Explained</div><button class="modalCloseButton" data-close-button>&times;</button></div>
+		<div class="modalBody">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+		</div>
+	</div>
+	<div data-modal-content class="modal" id="functionModal">
+	<div class="modalHeader"><div class="modalTitleText">Function Explained</div><button class="modalCloseButton" data-close-button>&times;</button></div>
+		<div class="modalBody">
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+		</div>
+	</div>
+	<div class="Go_To_Portfolio" ><a id="nextPage">next page</a></div>
+	<div id="overlay"></div>
 </body>
 </html>

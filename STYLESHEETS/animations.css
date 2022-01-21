@@ -19,16 +19,29 @@
 	-webkit-background-size: 100%;
 	background-position: 5vw 0vw;
 	opacity: 0;
-	animation: Text 7.75s ease-in-out forwards;
-	animation-delay: 2.25s; 
-} 
-@keyframes Text{
+	animation: text 7.75s ease-in-out forwards;
+	animation-delay: 3s;
+}
+@keyframes text{
 	0%{
 		-webkit-background-size: 100%;
 		opacity: 0;
 	}
 	100%{
 		-webkit-background-size: 1200%;
+		opacity: 100;
+	}
+}#arrowTextAnimation{
+	opacity: 0;
+	animation: feelFormFunctionText 1.5s ease-in-out forwards;
+	animation-delay: 1.5s;
+	pointer-events: all;
+}
+@keyframes feelFormFunctionText {
+	0%{
+		opacity: 0;
+	}
+	100%{
 		opacity: 100;
 	}
 }
