@@ -23,19 +23,23 @@ background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
 background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
 background: linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-background-size: 100%;
+	background-size: 100%;
 	opacity: 0;
 	animation: text 7.75s ease-in-out forwards;
 	animation-delay: 3s;
 }
 @keyframes text{
 	0%{
+		-webkit-background-clip: text;
 		-webkit-background-size: 100%;
 		opacity: 0;
 	}
 	100%{
 		-webkit-background-size: 1200%;
+		background-size: 1200%;
 		opacity: 100;
 	}
 }#arrowTextAnimation{
