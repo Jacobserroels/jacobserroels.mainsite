@@ -4,20 +4,27 @@
 }
 @keyframes Title {
 	0% {
-		transform: translateY(12vw);
+		transform: translateY(12vh);
 		opacity: 0;
 	}
 	50%{
-		transform: translateY(10vw);
+		transform: translateY(10vh);
 		opacity: 100;
 	}
 }
+
 .Animate_Text{
+	position: fixed;
+	margin-top: -10vw;
+	padding-top: 10vh;
 	color:transparent;
-	background-image: linear-gradient(to bottom, black 2%, transparent 25%);
+	background: rgb(0,0,0);
+background: -moz-linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
+background: -webkit-linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
+background: linear-gradient(180deg, rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
 	-webkit-background-clip: text;
 	-webkit-background-size: 100%;
-	background-position: 5vw 0vw;
 	opacity: 0;
 	animation: text 7.75s ease-in-out forwards;
 	animation-delay: 3s;
