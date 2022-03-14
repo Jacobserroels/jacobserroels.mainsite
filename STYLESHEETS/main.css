@@ -1,6 +1,11 @@
 :root{
 	--playState: running;
 }
+@font-face{
+	font-family: 'Swis721 BT';
+	src: url("../ASSETS/FONTS/swis721btbold/Swis721_BT_Bold.ttf")
+		
+}
 body{
 	padding-top: 0ex;
 	margin-top:5vh;
