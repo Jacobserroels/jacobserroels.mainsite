@@ -20,28 +20,34 @@
 	position: fixed;
 	margin-top: -10vw;
 	padding-top: 10vh;
+	padding-bottom: 20vh;
 }
 #Page_One_Body{
+	padding-bottom: 1000vh;
 	color:transparent;
 	background: rgb(0,0,0);
-	background: -webkit-linear-gradient(rgba(0,0,0,1) 1%, rgba(0,0,0,0) 5%);
+	background: -webkit-linear-gradient(rgba(0,0,0,1) 1%, rgba(0,0,0,0) 5%) top no-repeat;
 	-webkit-background-clip: text;
 	-webkit-box-decoration-break: clone;
-	-webkit-background-size: 100%;
+	-webkit-background-size: 100% 1%;
 	opacity: 0;
-	animation: text 7.75s ease-in-out forwards;
-	animation-delay: 3s; 
+	animation: body-text-animations 7.75s ease-in-out forwards;
+	animation-delay: 3s;
 }
-@keyframes text{
+@keyframes body-text-animations{
 	0%{
-		-webkit-background-size: 100%;
+		-webkit-background-size: 100% 0.1%;
 		opacity: 0;
 	}
-	100%{
-		-webkit-background-size: 4500%;
+	65%{
 		opacity: 100;
 	}
-}#arrowTextAnimation{
+	100%{
+		-webkit-background-size: 100% 225%;
+		opacity: 100;
+	}
+}
+#arrowTextAnimation{
 	opacity: 0;
 	animation: feelFormFunctionText 1.5s ease-in-out forwards;
 	animation-delay: 1.5s;
