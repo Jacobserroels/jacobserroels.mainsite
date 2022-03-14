@@ -4,7 +4,7 @@
 //		const formText = document.getElementById('formText');
 //		const functionText = document.getElementById('functionText');
 		const closeModalButton = document.querySelectorAll('[data-close-button]');
-		const openModalHover = document.querySelectorAll('[data-modal-target]');
+		const openModalClick = document.querySelectorAll('[data-modal-target]');
 		const overlay = document.getElementById('overlay');
 		
 //		antiquated code
@@ -12,8 +12,8 @@
 //		formText.addEventListener('mouseenter', pauseAnimation);
 //		functionText.addEventListener('mouseenter', pauseAnimation);
 		
-		openModalHover.forEach(item => {
-			item.addEventListener('mouseover', () =>{
+		openModalClick.forEach(item => {
+			item.addEventListener('click', () =>{
 				const modalName = document.querySelector(item.dataset.modalTarget);
 				openModal(modalName);
 			})
