@@ -12,38 +12,33 @@
 		opacity: 100;
 	}
 }
-
+#Page_One_Body{
+	color:transparent;
+	
+}
 .Animate_Text{
 	position: fixed;
 	margin-top: -10vw;
 	padding-top: 10vh;
+}
+#Page_One_Body{
 	color:transparent;
 	background: rgb(0,0,0);
-	background: -webkit-linear-gradient(rgba(0,0,0,1) 2%, rgba(0,0,0,0) 25%);
+	background: -webkit-linear-gradient(rgba(0,0,0,1) 1%, rgba(0,0,0,0) 5%);
 	-webkit-background-clip: text;
-	-moz-background-clip: text;
-	-o-background-clip: text;
-	background-clip: text;
 	-webkit-box-decoration-break: clone;
 	-webkit-background-size: 100%;
-	-moz-background-size: 100%;
-	-o-background-size: 100%;
-	background-size: 100%;
 	opacity: 0;
 	animation: text 7.75s ease-in-out forwards;
-	animation-delay: 3s;
+	animation-delay: 3s; 
 }
 @keyframes text{
 	0%{
 		-webkit-background-size: 100%;
-		-moz-background-size:100%;
-		background-size: 100%;
 		opacity: 0;
 	}
 	100%{
-		-webkit-background-size: 1200%;
-		-moz-background-size:1200%;
-		background-size:1200%;
+		-webkit-background-size: 4500%;
 		opacity: 100;
 	}
 }#arrowTextAnimation{
