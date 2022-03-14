@@ -86,6 +86,7 @@ a:hover{
 
 /*Start Design Philosophy Styling*/
 #nextPage{
+	margin-top: 1vh;
 	color: #7da6e3;
 	position: fixed;
 	left: 75%;
