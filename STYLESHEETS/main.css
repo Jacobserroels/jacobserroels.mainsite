@@ -1,31 +1,42 @@
 :root{
 	--playState: running;
+}
 @font-face{
 	font-family: 'Swis721 BT';
 	src: url("../ASSETS/FONTS/swis721btbold/Swis721_BT_Bold.ttf")
-		
+	}
+@font-face{
+	font-family: 'Swis721 BT Roman';
+	src:url("../ASSETS/FONTS/swis721btbold/Swis721_Cn_BT_Roman.ttf")
 }
 body{
 	padding-top: 0ex;
 	margin-top:5vh;
+	background-color: #EBE8E4;
 }
-.Go_To_Portfolio {
+.Go_To_Portfolio{
 	z-index: 5;
 	cursor: pointer;
 	padding-left: 5em;
 	margin-top: 1vh; 
 	font-size: 1vw;
 	font-family: "Swis721 BT";
-	font-weight: 400;}
-a:link{
+	font-weight: 400;
+}
+a:visited{
 	color: #7da6e3;
 	text-decoration: none;
 }
 a:active{
-	color: black;
-	text-decoration: none;}
-a:hover{
 	color: #7da6e3;
+	text-decoration: none;
+}
+a:link{
+	color: #7da6e3;
+	text-decoration: none;
+}
+a:hover{
+	color: #1c1c1c;
 }
 .Title_Syling{
 	z-index: 3;
@@ -60,7 +71,7 @@ a:hover{
 	font-size: 1.25vw;
 	line-height: 1.25;
 	font-family: "Swis721 BT";
-	font-weight: 400;
+	font-weight: 50;
 }
 /*Start Home Styling*/
 #Home_Title_Img{
@@ -75,8 +86,10 @@ a:hover{
 
 /*Start Design Philosophy Styling*/
 #nextPage{
+	color: #7da6e3;
 	position: fixed;
 	left: 75%;
+	z-index: top;
 }
 #designPhilosphyTitleSyle{
 	margin-top: -15vh;
@@ -125,7 +138,7 @@ a:hover{
 	animation-play-state: var(--playState);
 }
 #formText:hover, #feelText:hover, #functionText:hover{
-	color: #7da6e3;
+	color: #1c1c1c;
 	cursor: pointer;
 }
 @keyframes rotateCircle{
