@@ -13,6 +13,7 @@ body{
 	padding-top: 0ex;
 	margin-top:5vh;
 	background-color: #EBE8E4;
+	overflow: hidden;
 }
 .Go_To_Portfolio{
 	z-index: 5;
@@ -73,6 +74,21 @@ a:hover{
 	font-family: "Swis721 BT";
 	font-weight: 50;
 }
+.nextPage{
+	margin-top: -5vw;
+	color: #7da6e3;
+	position: fixed;
+	left: 75%;
+	z-index: top;
+	font-size: 1.25vw;
+	line-height: 1.25;
+	font-family: "Swis721 BT";
+	font-weight: 50;
+	/*margin-bottom:60vw;*/
+}
+.nextPage:hover{
+	color: #1c1c1c;
+}
 /*Start Home Styling*/
 #Home_Title_Img{
 	width: 85%;
@@ -82,16 +98,12 @@ a:hover{
 	width: 50%;
 	height: auto;
 }
+#pageOneNextPage{
+	margin-top: 1vw;
+}
 /*End Home Styling*/
 
 /*Start Design Philosophy Styling*/
-#nextPage{
-	margin-top: 1vh;
-	color: #7da6e3;
-	position: fixed;
-	left: 75%;
-	z-index: top;
-}
 #designPhilosphyTitleSyle{
 	margin-top: -15vh;
 	margin-left: 7.75vw;
@@ -100,40 +112,47 @@ a:hover{
 	
 }
 #circleOfArrows{
-	margin-top: -7vw;
-	height: 30vw;
+	display: inline-block;
+/*	margin-top: -7vw;*/
+	height: 35vw;
+	width: 60vw;
+	transform-origin: center;
 }
 #functionText{
+	margin-left: 18vw;
+	margin-top: -28.5vw;
+	display: inline-block;
 	position: fixed;
-	margin-top: -24.5vw;
-	margin-left: 4vw;
 	font-size: 1.75vw;
 	animation: rotateText 50s linear infinite;
 	animation-play-state: var(--playState);
 }
 #formText{
+	margin-left: 20.5vw;
+	margin-top: -8vw;
+	display: inline-block;
 	position: fixed;
-	margin-top: -6.5vw;
-	margin-left: 6.25vw;
 	font-size: 1.75vw;
 	animation: rotateText 50s linear infinite;
 	animation-play-state: var(--playState);
 }
 #feelText{
+	margin-top: -24.5vw;
+	margin-left: 78vh;
+	display: inline-block;
 	position: fixed;
-	margin-top: -20.5vw;
-	margin-left: 23.5vw;
 	font-size: 1.75vw;
 	animation: rotateText 50s linear infinite;
 	animation-play-state: var(--playState);
 }
 .arrowAnimation{
+	display: inline-block;
 	color: #7da6e3;
 	pointer-events: none;
 	margin-left: -3vw;
 	margin-top: 19.5vh;
-	padding-top: 7vw;
-	padding-bottom:-6vw;
+	/*padding-top: 7vw;
+	padding-bottom:-6vw;*/
     transform-origin: center; /* 0,0 indicates top left corner*/
 	animation: rotateCircle 50s linear infinite;
 	animation-play-state: var(--playState);
