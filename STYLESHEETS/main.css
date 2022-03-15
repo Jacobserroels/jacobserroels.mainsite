@@ -109,7 +109,19 @@ a:hover{
 	margin-left: 7.75vw;
 	margin-bottom: -20vw;
 	width: 80vw;
-	
+}
+#pageTwoContent{
+	display: inline-block;
+	margin-left: 25vw;
+}
+#designPhilosophyBodyText{
+	display: inline-block;
+	position: absolute;
+	text-align: left;
+	text-indent: 1.5vw;
+	width: 20vw;
+	margin-left: -12.5vw;
+	margin-top: clamp(200px, 25vw, 280px)
 }
 #circleOfArrows{
 	display: inline-block;
