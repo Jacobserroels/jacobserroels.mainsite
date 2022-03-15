@@ -137,8 +137,8 @@ a:hover{
 	animation-play-state: var(--playState);
 }
 #feelText{
+	margin-left: 40vw;
 	margin-top: -24.5vw;
-	margin-left: 78vh;
 	display: inline-block;
 	position: fixed;
 	font-size: 1.75vw;
