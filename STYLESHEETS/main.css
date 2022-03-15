@@ -111,6 +111,7 @@ a:hover{
 	width: 80vw;
 }
 #pageTwoContent{
+	margin-top:clamp(-15rem, 0vw, 0rem);
 	display: inline-block;
 	margin-left: 25vw;
 }

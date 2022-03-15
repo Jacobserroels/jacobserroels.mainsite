@@ -47,7 +47,7 @@
 		opacity: 100;
 	}
 }
-#arrowTextAnimation{
+#designPhilosophyBodyText,#arrowTextAnimation{
 	opacity: 0;
 	animation: feelFormFunctionText 1.5s ease-in-out forwards;
 	animation-delay: 1.5s;
