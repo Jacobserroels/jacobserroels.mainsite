@@ -1,0 +1,93 @@
+[
+		{
+			"title": "Seth Kaminsky - Sutter Creek Sessions",
+			"role": "Director - Producer",
+			"summary": "Creating a seires of live preformance videos for musical artist Seth Kaminsky",
+			"previewImage": "Projects/Seth Kamsinky - Sutter Creek Sessions/0000397_0000397-R1-E017.jpg",
+			"openingParagraph":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend",
+			"workProduced": [
+								{
+									"itemTitle" : "I Love You - Live Preformance Video",
+									"itemSummary": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend",
+									"itemKind":0,
+									"wrapperStyle":"padding:41.51% 0 0 0;position:relative;",
+									"itemLink": "https://player.vimeo.com/video/662101979?h=ab0165122b&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+								},
+								{
+									"itemTitle" : "Credits:",
+									"itemSummary": "<br>Director / Producer: Jacob Serroels<br>Director of Photography: Zach Cheek <br>Audio Tech: Michael Holladay",
+									"itemKind":0,
+									"wrapperStyle":"",
+									"itemLink": ""
+								}
+							]
+		},
+		{
+			"title": "Teas For Life - Video Look Motion Graphics Package",
+			"role": "Director - Designer",
+			"summary": "Designing and intro and video content for a YouTube Series",
+			"previewImage": "Projects/Seth Kamsinky - Sutter Creek Sessions/0000397_0000397-R1-E017.jpg",
+			"openingParagraph":"Opening Paragraph",
+			"workProduced": [
+								{
+									"itemTitle" : "YouTube Video Intro",
+									"itemSummary": "This was an intro for a YouTube series I produced for this company",
+									"itemKind":0,
+									"wrapperStyle":"padding:56.25% 0 0 0;position:relative;",
+									"itemLink": "https://player.vimeo.com/video/691976258?h=2ea422f23f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+								}
+
+							]
+		},
+		{
+			"title": "Cheese Burger",
+			"role": "Project Role",
+			"summary": "Project Summary",
+			"previewImage": "Projects/Seth Kamsinky - Sutter Creek Sessions/0000397_0000397-R1-E017.jpg",
+			"openingParagraph":"Opening Paragraph",
+			"workProduced": [
+								{
+									"itemTitle" : "Item Title",
+									"itemSummary": "Item Summary",
+									"itemKind":0,
+									"wrapperStyle":"",
+									"itemLink": "item.url"
+								}
+
+							]
+		},
+		{
+			"title": "Cheese Burger",
+			"role": "Project Role",
+			"summary": "Project Summary",
+			"previewImage": "Projects/Seth Kamsinky - Sutter Creek Sessions/0000397_0000397-R1-E017.jpg",
+			"openingParagraph":"Opening Paragraph",
+			"workProduced": [
+								{
+									"itemTitle" : "Item Title",
+									"itemSummary": "Item Summary",
+									"itemKind":0,
+									"wrapperStyle":"",
+									"itemLink": "item.url"
+								}
+
+							]
+		},
+		{
+			"title": "Cheese Burger",
+			"role": "Project Role",
+			"summary": "Project Summary",
+			"previewImage": "Projects/Seth Kamsinky - Sutter Creek Sessions/0000397_0000397-R1-E017.jpg",
+			"openingParagraph":"Opening Paragraph",
+			"workProduced": [
+								{
+									"itemTitle" : "Item Title",
+									"itemSummary": "Item Summary",
+									"itemKind":0,
+									"wrapperStyle":"",
+									"itemLink": "item.url"
+								}
+
+							]
+		}
+]
