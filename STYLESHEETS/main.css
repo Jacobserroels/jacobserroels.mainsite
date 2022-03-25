@@ -405,6 +405,7 @@ a:hover{
 	max-height: 80vh;
 	padding: 0 2vw 2vh 2vw;
 	overflow-x: scroll;
+	overflow-y: hidden;
 }
 .openingParagraph{
 	font-weight: 100;
