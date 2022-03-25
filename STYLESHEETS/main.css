@@ -331,7 +331,7 @@ a:hover{
   	overflow-y: scroll;
   	overflow-x: hidden;
 }
-.sexyContentPreview{
+.contentPreview{
 	display: flex;
 	margin: auto;
 	width: 100%;
