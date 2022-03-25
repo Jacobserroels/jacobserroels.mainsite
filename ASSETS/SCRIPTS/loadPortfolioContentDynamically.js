@@ -154,7 +154,7 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 
 var bodyOfWork = new XMLHttpRequest();
 const overlay = document.getElementById('overlay');
-bodyOfWork.open('GET', 'PROJECTS/bodyOfWork.json');
+bodyOfWork.open('GET', 'JSON/bodyOfWork.json');
 bodyOfWork.onload = function()
   { 
 	var allProjects=JSON.parse(bodyOfWork.responseText);
