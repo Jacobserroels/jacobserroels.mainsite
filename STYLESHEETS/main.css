@@ -218,6 +218,16 @@ a:hover{
 	padding: 0 2vw 2vh 2vw;
 	overflow-x: scroll;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 .modal.active{
 	transform: translate(-50%,-50%) scale(1);
 	transition: 500ms cubic-bezier(1,-0.01,.59,1.01);
@@ -390,22 +400,6 @@ a:hover{
 	border-radius: 1vw;
 	overflow: hidden;
 	transform: translateZ(0)
-}
-.portfolioModal{
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%) scale(0);
-	transition: 500ms cubic-bezier(1,-0.01,.59,1.01);
-	border-radius: 0.5vw;
-	z-index: 50;
-	background: #EBE8E4;
-	width: 100vw;
-	max-width: 80%;
-	max-height: 80vh;
-	padding: 0 2vw 2vh 2vw;
-	overflow-x: scroll;
-	overflow-y: hidden;
 }
 .openingParagraph{
 	font-weight: 100;
