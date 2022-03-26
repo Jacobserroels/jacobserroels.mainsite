@@ -28,7 +28,7 @@ function makeObject(header,object,newDiv){
 	//newDiv.appendChild(document.createElement("br"));
 	newDiv.appendChild(headerText);
 	//newDiv.appendChild(document.createElement("br"));
-}
+} 
 
 function makeImageObject(image,newDiv){
 	newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('"+image+"') no-repeat top center"
@@ -51,13 +51,14 @@ function makeImageObject(image,newDiv){
 function createModal(project){
 	// Creating outter rapper for modal
 	var modalWrapper = document.createElement("div");
+		document.body.appendChild(modalWrapper);
 		modalWrapper.classList.add('modal');
-		//Adding active class to modal
-		modalWrapper.classList.add('active'); 
+		//Adding active class to modal 
 		overlay.classList.add('active');
+		setTimeout(activeModal, 0.1)
+		function activeModal(){modalWrapper.classList.add('active');}
 	
 		// Adding modal to the dom
-		document.body.appendChild(modalWrapper);
 		// Creating header rapper
 		var modalHeader = document.createElement("div");
 			modalHeader.classList.add("modalHeader");
