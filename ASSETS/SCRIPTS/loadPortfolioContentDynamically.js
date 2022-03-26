@@ -152,12 +152,13 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 		imgWrapper.appendChild(img);
 }
 
-var bodyOfWork = new XMLHttpRequest();
 const overlay = document.getElementById('overlay');
-bodyOfWork.open('GET', 'JSON/bodyOfWork.json');
+var bodyOfWork = new XMLHttpRequest();
+bodyOfWork.open('GET', "https://api.jsonbin.io/b/623ebc210618276743800217", true);
 bodyOfWork.onload = function()
   { 
 	var allProjects=JSON.parse(bodyOfWork.responseText);
 	allProjects.forEach(createSliderObjects);
 	}
+bodyOfWork.setRequestHeader("secret-key", "$2b$10$C5QHYpg3jspaaKN6jPPo2.Qak8A3N80aPqoiPfNHdM4OhDaRMMn7K");
 bodyOfWork.send();
