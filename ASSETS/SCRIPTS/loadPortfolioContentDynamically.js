@@ -1,6 +1,6 @@
 function createSliderObjects(project){
 	// Finding slides wrapper
-	var wrapper = document.getElementById("horizontalScrollBkg");
+	var wrapper = document.getElementById("cardWrapper");
 	// Creating the new content item
 	var newDiv = document.createElement("div");
 	wrapper.appendChild(newDiv);
@@ -21,9 +21,8 @@ function makeObject(header,object,newDiv){
 	var headerTitle = document.createElement("h1");
 	headerTitle.innerHTML = header
 	headerTitle.classList.add("cardHeaders");
-	var headerText = document.createElement('div');
+	var headerText = document.createElement('h2');
 	headerText.innerHTML = object;
-	headerText.classList.add("small");
 	newDiv.appendChild(headerTitle);
 	//newDiv.appendChild(document.createElement("br"));
 	newDiv.appendChild(headerText);

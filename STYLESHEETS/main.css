@@ -1,6 +1,5 @@
 :root{
 	--playState: running;
-	--fontSize: calc(40/5vmin);
 }
 @font-face{
 	font-family: 'Swis721 BT';
@@ -325,20 +324,15 @@ a:hover{
 .portfolioContent{
 	
 }
-.cardWrapper{
-	padding: 10px;
-	background: white;
-	box-sizing: border-box;
-	resize: horizontal;
-	border: 1px dashed;
-	overflow: auto;
-	max-width: 100%;
-	height: calc(100vh - 16px);
+#cardWrapper{
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: 21%;
+	column-gap: 5%;
+	overflow-x: auto;
+	background-color: black;
 }
 .contentItem{
-	 width: 100%;
-  padding-bottom: 75%;
-  background: gold; /** <-- For the demo **/
 }
 .aspectMaintain{
 	position: absolute;
