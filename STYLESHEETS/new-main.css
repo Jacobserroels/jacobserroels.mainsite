@@ -52,9 +52,16 @@ h3{
 	font-weight: 100;
 	font-family: "Swis721 BT";
 }
+p{
+	font-size: var(--step--1);
+	line-height: var(--step--1);
+	font-family: "Swis721 BT";
+}
 a{
+	font-size: var(--step--1);
 	 color: var(--altColor);
     text-decoration: none;
+	font-family: "Swis721 BT";
 }
 a:hover{
 	 color: var(--darkColor);
@@ -174,7 +181,10 @@ a:hover{
 	pointer-events: all;
 	opacity: 1;
 }
-::-webkit-scrollbar {
+#cardWrapper{
+	scroll-behavior: smooth;
+}
+#cardWrapper::-webkit-scrollbar {
   display: none;
 }
 #cardWrapper{

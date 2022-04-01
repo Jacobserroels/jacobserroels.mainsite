@@ -1,11 +1,38 @@
-body > h1{
-	margin-top: 7.5vh;
-	display: grid;
-	place-content: center;
-}
+/*General Syling*/
 body > div{
 	display: grid;
 	grid-auto-flow: column;
+	place-content: center;
+}
+/*Page One Syling*/
+div > a{
+	margin-top: 4vh;
+	position: relative;
+	right: 20vw;
+}
+#pageOneHeader{
+	display: grid;
+	place-content: center;
+}
+#pageOneHeader > img{
+	margin-top: 1vh;
+	inline-size: 100vh;
+	display: grid;
+	place-content: center;
+	
+}
+#pageOneBody{
+	max-width: 45vw;
+	max-height: 50vh;
+	margin: auto;
+	margin-top: 5vh;
+	
+}
+/*Portfolio Page Styling*/
+#portfolioHeader > img{
+	margin-top: 4vh;
+	inline-size: 50vh;
+	display: grid;
 	place-content: center;
 }
 body > div > h3{
@@ -17,6 +44,28 @@ body > div > h3{
 .portfolioContent{
 	margin-top: 5vh;
 }
+#scrollNav{
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+}
+#scrollButtonLeft, #scrollButtonRight{
+	inline-size: 80vw;
+	block-size: 2vh;
+	position: relative;
+	filter: invert(75%) sepia(18%) saturate(4909%) hue-rotate(187deg) brightness(95%) contrast(88%);
+}
+#scrollButtonLeft:hover, #scrollButtonRight:hover{
+	filter: none;
+}
+#scrollButtonLeft{
+	transform: rotate(-90deg);
+	left: 40%;
+}
+#scrollButtonRight{
+	transform: rotate(90deg);
+	right: 40%;
+}
 #scrollBar{
 	inline-size: 80vw;
 	block-size: 2vh;
@@ -24,7 +73,7 @@ background: linear-gradient(270deg, rgba(235,232,228,1) 0%, rgba(125,166,227,1) 
 	border-radius: 2rem;
 	background-size: 700%;
 	background-position: left;
-	border: 2.5px solid var(--darkColor);
+/*	border: 2.5px solid var(--darkColor);*/
 }
 
 #cardWrapper {
