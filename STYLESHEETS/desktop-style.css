@@ -5,7 +5,7 @@ body > div{
 	place-content: center;
 }
 /*Page One Syling*/
-div > a{
+div > a {
 	margin-top: 4vh;
 	position: relative;
 	right: 20vw;
@@ -16,7 +16,7 @@ div > a{
 }
 #pageOneHeader > img{
 	margin-top: 1vh;
-	inline-size: 100vh;
+	inline-size: 50vw;
 	display: grid;
 	place-content: center;
 	
@@ -24,9 +24,11 @@ div > a{
 #pageOneBody{
 	max-width: 45vw;
 	max-height: 50vh;
-	margin: auto;
-	margin-top: 5vh;
-	
+	margin: min(20px,1vh) auto;
+}
+#pageOneBody>p{
+	font-size: clamp(var(--step--2),var(--step--1));
+	line-height: clamp(var(--step--2),3.5vh,2px);
 }
 /*Portfolio Page Styling*/
 #portfolioHeader > img{
@@ -69,7 +71,7 @@ body > div > h3{
 #scrollBar{
 	inline-size: 80vw;
 	block-size: 2vh;
-background: linear-gradient(270deg, rgba(235,232,228,1) 0%, rgba(125,166,227,1) 100%);
+background: linear-gradient(90deg, rgba(125,166,227,1) 0%, rgba(2,0,36,1) 100%);
 	border-radius: 2rem;
 	background-size: 700%;
 	background-position: left;
