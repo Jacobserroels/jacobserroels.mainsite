@@ -3,9 +3,9 @@
 //		const feelText = document.getElementById('feelText');
 //		const formText = document.getElementById('formText');
 //		const functionText = document.getElementById('functionText');
-		const closeModalButton = document.querySelectorAll('[data-close-button]');
-		const openModalClick = document.querySelectorAll('[data-modal-target]');
-		const overlay = document.getElementById('overlay');
+		var closeModalButton = document.querySelectorAll('[data-close-button]');
+		var openModalClick = document.querySelectorAll('[data-modal-target]');
+		var overlay = document.getElementById('overlay');
 		
 //		antiquated code
 //		feelText.addEventListener('mouseenter', pauseAnimation);

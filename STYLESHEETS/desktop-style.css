@@ -14,21 +14,67 @@ div > a {
 	display: grid;
 	place-content: center;
 }
+/*Page One Styling*/
 #pageOneHeader > img{
 	margin-top: 1vh;
 	inline-size: 50vw;
 	display: grid;
 	place-content: center;
-	
+	animation: title 3s ease-in-out;
 }
 #pageOneBody{
 	max-width: 45vw;
 	max-height: 50vh;
 	margin: min(20px,1vh) auto;
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
 }
 #pageOneBody>p{
 	font-size: clamp(var(--step--2),var(--step--1));
 	line-height: clamp(var(--step--2),3.5vh,2px);
+}
+/*Design Philosophy Styling*/
+#pageTwoBody{
+	max-width: 45vw;
+	max-height: 50vh;
+	margin: min(20px,1vh) auto;
+}
+#pageTwoBody > p{
+	font-size: clamp(var(--step--2),var(--step--1));
+	line-height: clamp(var(--step--2),3.5vh,2px);
+	width: 75%;
+	margin: auto;
+}
+#arrowAnimation{
+	animation: rotateCircle 50s linear infinite;
+	animation-play-state: var(--playState);
+}
+#circleOfArrows{
+	transform-origin: center;
+	display: inline-block;
+}
+#arrowTextAnimation{
+}
+#formText>p,#feelText>p,#functionText>p{
+	font-size: clamp(var(--step--2),var(--step--1));
+	line-height: clamp(var(--step--2),3.5vh,2px);
+	display: inline-block;
+	position: fixed;
+	animation: rotateText 50s linear infinite;
+	animation-play-state: var(--playState);
+}
+#functionText>p{
+	margin-left: 2vw;
+	margin-top: -16.5vw;
+}
+#formText>p{
+	margin-left: 3.5vw;
+	margin-top: -5vw;
+}
+#feelText>p{
+	margin-left: 15vw;
+	margin-top: -14.5vw;
 }
 /*Portfolio Page Styling*/
 #portfolioHeader > img{
@@ -42,7 +88,6 @@ body > div > h3{
 	color: var(--darkColor);
 	margin: 3vh 5vw
 }
-/* Portfolio Page */
 .portfolioContent{
 	margin-top: 5vh;
 }

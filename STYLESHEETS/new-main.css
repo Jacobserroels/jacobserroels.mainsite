@@ -66,6 +66,7 @@ a{
 a:hover{
 	 color: var(--darkColor);
     text-decoration: none;
+	cursor: pointer;
 }
 /* Modal Controls */
 
