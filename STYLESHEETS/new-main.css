@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+/*Document Setup*/
+
+:root{
+	--playState: running;
+	--lightColor: #EBE8E4;
+	--darkColor: #1c1c1c;
+	--altColor: #7da6e3;
+	--step--2: clamp(0.96rem, calc(0.41rem + 0.77vw), 0.56rem);
+	--step--1: clamp(1.20rem, calc(0.47rem + 1.02vw), 0.68rem);
+	--step-0: clamp(0.81rem, calc(0.54rem + 1.34vw), 1.50rem);
+	--step-1: clamp(0.98rem, calc(0.62rem + 1.76vw), 1.88rem);
+	--step-2: clamp(1.17rem, calc(0.71rem + 2.29vw), 2.34rem);
+	--step-3: clamp(1.40rem, calc(0.81rem + 2.98vw), 2.93rem);
+	--step-4: clamp(1.69rem, calc(0.91rem + 3.86vw), 3.66rem);
+	--step-5: clamp(2.02rem, calc(1.02rem + 4.99vw), 4.58rem);
+}
+@font-face{
+	font-family: 'Swis721 BT';
+	src: url("../ASSETS/FONTS/swis721btbold/Swis721_BT_Bold.ttf")
+	}
+@font-face{
+	font-family: 'Swis721 BT Roman';
+	src:url("../ASSETS/FONTS/swis721btbold/Swis721_Cn_BT_Roman.ttf")
+}
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background-color: var(--lightColor);
+	overflow: hidden;
+	/*background-image:
+      repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+      repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+    background-size: 71px 71px;*/
+}
+h1{
+	font-size: var(--step-5);
+	line-height: var(--step-5);
+	font-weight: 900;
+	font-family: "Bookmainia";
+	font-family: bookmania,serif;
+	font-style: normal;
+}
+h2{
+	font-size: var(--step-3);
+	line-height: var(--step-3);
+	font-weight: 400;
+	font-family: "Swis721 BT";
+}
+h3{
+	font-size: var(--step-1);
+	line-height: var(--step-1);
+	font-weight: 100;
+	font-family: "Swis721 BT";
+}
+p{
+	font-size: var(--step--1);
+	line-height: var(--step--1);
+	font-family: "Swis721 BT";
+}
+a{
+	font-size: var(--step--1);
+	 color: var(--altColor);
+    text-decoration: none;
+	font-family: "Swis721 BT";
+}
+a:hover{
+	 color: var(--darkColor);
+    text-decoration: none;
+	cursor: pointer;
+}
+/* Modal Controls */
+
+.portfolioVideo{
+	margin: 5%, 5%;
+	padding:15px 0;
+	border-radius: 1vw;
+	overflow: hidden;
+	transform: translateZ(0)
+}
+.portfolioPhotoController{
+	width: 20vw;
+}
+.portfolioPhoto{
+	margin: 5%, 5%;
+	border-radius: 1vw;
+	overflow: hidden;
+	transform: translateZ(0)
+}
+.openingParagraph{
+	font-weight: 100;
+	margin: 3.5vmax 1vmax 0;
+	text-indent: 1em;
+	padding-bottom: 1vmax;
+	border-bottom: 1px solid black;
+}
+.modalItemHeader{
+	font-size: 1.5em;
+	font-family: "Bookmania";
+	font-weight: 800;
+	margin: 1vmax 1.5vmax 0.25vmax;
+}
+.modalDescription{
+	margin: 1vmax 1vmax 0;
+	font-weight: lighter;
+	text-indent: 1em;
+	padding-bottom: 1vmax;
+	border-bottom: 1px solid black;
+	
+}
+.modal{
+	display: inline;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%) scale(0);
+	transition: 500ms cubic-bezier(1,-0.01,.59,1.01);
+	border: 1px solid black;
+	border-radius: 0.5vw;
+	z-index: 50;
+	background: #EBE8E4;
+	width: 100vw;
+	max-width: 80%;
+	max-height: 80vh;
+	padding: 0 2vw 2vh 2vw;
+	overflow-x: scroll;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.modal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.modal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.modal.active{
+	transform: translate(-50%,-50%) scale(1);
+	transition: 500ms cubic-bezier(1,-0.01,.59,1.01);
+	overflow-x: scroll;
+}
+.modalHeader{
+	padding: 0.5vw 0.5vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid black;
+}
+
+.modalTitleText{
+	font-size: 2.25vw;
+	font-family: "Bookmania";
+	font-weight: 800;
+}
+.modalCloseButton{
+	cursor: pointer;
+	border: none;
+	outline: none;
+	background: none;
+	font-family: "Bookmania";
+	font-weight: 800;
+	font-size: 2.25vw;
+}
+.modalBody{
+	padding: 0.5vw 0.5vw;
+	line-height: 1.25;
+	font-family: "Swis721 BT";
+	font-weight: 400;
+	font-size: 1.25vw;
+}
+#overlay{
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	background-color: rgba(0,0,0,.5);
+	pointer-events: none;
+}
+#overlay.active{
+	pointer-events: all;
+	opacity: 1;
+}
+#cardWrapper{
+	scroll-behavior: smooth;
+}
+#cardWrapper::-webkit-scrollbar {
+  display: none;
+}
+#cardWrapper{
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,0 +1,224 @@
+/*General Syling*/
+body{
+}
+body > div{
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+}
+/*Page One Syling*/
+div > a {
+	margin-top: 2.5vh;
+	margin-bottom: 10vh;
+	position: relative;
+	left: 20vw;
+	font-size:clamp(15px,var(--step--2),var(--step--1));
+	line-height: 15px;
+	font-weight: 100;
+}
+#portfolioButton > a{
+	left: -30vw;
+	right: 30vw;
+	font-size:clamp(15px,var(--step--2),var(--step--1));
+	line-height: 15px;
+	font-weight: 100;
+}
+#pageOneHeader{
+	display: grid;
+	place-content: center;
+}
+/*Page One Styling*/
+#pageOneHeader > img{
+	margin-top: 1vh;
+	margin-bottom: 2.5vh;
+	inline-size: 85vw;
+	display: grid;
+	place-content: center;
+}
+#pageOneBody{
+	max-width: 75vw;
+	max-height: 95vh;
+	margin: auto;
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+	font-weight: 100;
+}
+#pageOneBody>p{
+	font-size:clamp(15px,var(--step--2),var(--step--1));
+	line-height: 15px;
+	font-weight: 100;
+	margin-bottom: 10vh;
+}
+#pageOneBody>p>a{
+	font-size:clamp(15px,var(--step--2),var(--step--1));
+	line-height: 15px;
+	font-weight: 100;
+	margin-top: 10vh;
+}
+/*Design Philosophy Styling*/
+#pageTwoBody{
+	max-width: 45vw;
+	max-height: 50vh;
+	margin: min(20px,1vh) auto;
+}
+#pageTwoBody > p{
+	font-size: clamp(var(--step--2),var(--step--1));
+	line-height: clamp(var(--step--2),3.5vh,2px);
+	width: 75%;
+	margin: auto;
+}
+#arrowAnimation{
+	animation: rotateCircle 50s linear infinite;
+	animation-play-state: var(--playState);
+}
+#circleOfArrows{
+	transform-origin: center;
+	display: inline-block;
+}
+#arrowTextAnimation{
+}
+#formText>p,#feelText>p,#functionText>p{
+	font-size: clamp(var(--step--2),var(--step--1));
+	line-height: clamp(var(--step--2),3.5vh,2px);
+	display: inline-block;
+	position: fixed;
+	animation: rotateText 50s linear infinite;
+	animation-play-state: var(--playState);
+}
+#functionText>p{
+	margin-left: 2vw;
+	margin-top: -16.5vw;
+}
+#formText>p{
+	margin-left: 3.5vw;
+	margin-top: -5vw;
+}
+#feelText>p{
+	margin-left: 15vw;
+	margin-top: -14.5vw;
+}
+/*Applied Design Style*/
+#pageThreeHeader > img{
+	margin-top: 8vh;
+	inline-size: 50vw;
+	display: grid;
+	place-content: center;
+}
+#pageThreeBody{
+	max-width: 40vw;
+	max-height: 50vh;
+	margin: min(20px,1vh) auto;
+	display: grid;
+	grid-auto-flow: row;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > p {
+	background-color: var(--darkColor);
+	color: var(--lightColor);
+	padding: 2vw;
+	border-radius: 2vw;
+	grid-auto-flow: row;
+	margin: 3vw 0;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > div{
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > div > div{
+	background-color: var(--darkColor);
+	color: var(--lightColor);
+	padding: 2vw;
+	margin: 0.5vw;
+	border-radius: 2vw;
+}
+/*Portfolio Page Styling*/
+#portfolioHeader > img{
+	margin-top: 4vh;
+	inline-size: 50vh;
+	display: grid;
+	place-content: center;
+}
+body > div > h3{
+	font-size: var(--step-0);
+	color: var(--darkColor);
+	margin: 3vh 5vw
+}
+.portfolioBody{
+	margin-top: 5vh;
+}
+#scrollNav{
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+}
+#scrollButtonLeft, #scrollButtonRight{
+	inline-size: 80vw;
+	block-size: 2vh;
+	position: relative;
+	filter: invert(75%) sepia(18%) saturate(4909%) hue-rotate(187deg) brightness(95%) contrast(88%);
+}
+#scrollButtonLeft:hover, #scrollButtonRight:hover{
+	filter: none;
+}
+#scrollButtonLeft{
+	transform: rotate(-90deg);
+	left: 40%;
+}
+#scrollButtonRight{
+	transform: rotate(90deg);
+	right: 40%;
+}
+#scrollBar{
+	inline-size: 80vw;
+	block-size: 2vh;
+background: linear-gradient(90deg, rgba(125,166,227,1) 0%, rgba(2,0,36,1) 100%);
+	border-radius: 2rem;
+	background-size: 700%;
+	background-position: left;
+/*	border: 2.5px solid var(--darkColor);*/
+}
+
+#cardWrapper {
+	margin-top: 2vh;
+	position: fixed;	
+	display: grid;
+	grid-auto-flow: column;
+	grid-column-gap: 20px;
+	padding: 1rem 2rem 2rem;
+	overflow-x: auto;
+	inline-size: 100%;
+	height: 70vh;
+	overflow-y: hidden;
+	grid-column: 23%;
+}
+#cardWrapper > div{
+	inline-size: 25vw;
+	color: var(--lightColor);
+	display: grid;
+	place-items:center;
+	text-align: center;
+	padding: 2em;
+	border-radius: 0.5em;
+	height: 60vh;
+	overflow: hidden;
+	border: 2.5px solid var(--darkColor);
+}
+#cardWrapper > div > h1,h2{
+	color: var(--lightColor);
+}
+#cardWrapper > div > h1 {
+	font-size: clamp(3.5vmin,var(--step-2),5.5vmin);
+	line-height: max(0.5px,var(--step-2));
+}
+#cardWrapper > div > h2{
+	padding: max(2.5px,1vmin) 0;
+	width: fit-content;
+	font-size: clamp(2.5vmin,var(--step--1),2.5vmin);
+	line-height: max(0.5px,var(--step--1));
+}

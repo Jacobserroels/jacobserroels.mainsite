@@ -1,6 +1,6 @@
 function createSliderObjects(project){
 	// Finding slides wrapper
-	var wrapper = document.getElementById("horizontalScrollBkg");
+	var wrapper = document.getElementById("cardWrapper");
 	// Creating the new content item
 	var newDiv = document.createElement("div");
 	wrapper.appendChild(newDiv);
@@ -21,14 +21,13 @@ function makeObject(header,object,newDiv){
 	var headerTitle = document.createElement("h1");
 	headerTitle.innerHTML = header
 	headerTitle.classList.add("cardHeaders");
-	var headerText = document.createElement('div');
+	var headerText = document.createElement('h2');
 	headerText.innerHTML = object;
-	headerText.classList.add("small");
 	newDiv.appendChild(headerTitle);
 	//newDiv.appendChild(document.createElement("br"));
 	newDiv.appendChild(headerText);
 	//newDiv.appendChild(document.createElement("br"));
-}
+} 
 
 function makeImageObject(image,newDiv){
 	newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('"+image+"') no-repeat top center"
@@ -51,13 +50,14 @@ function makeImageObject(image,newDiv){
 function createModal(project){
 	// Creating outter rapper for modal
 	var modalWrapper = document.createElement("div");
+		document.body.appendChild(modalWrapper);
 		modalWrapper.classList.add('modal');
-		//Adding active class to modal
-		modalWrapper.classList.add('active'); 
+		//Adding active class to modal 
 		overlay.classList.add('active');
+		setTimeout(activeModal, 0.1)
+		function activeModal(){modalWrapper.classList.add('active');}
 	
 		// Adding modal to the dom
-		document.body.appendChild(modalWrapper);
 		// Creating header rapper
 		var modalHeader = document.createElement("div");
 			modalHeader.classList.add("modalHeader");
