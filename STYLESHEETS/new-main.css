@@ -123,8 +123,13 @@ a:hover{
 	z-index: 50;
 	background: #EBE8E4;
 	width: 100vw;
+<<<<<<< HEAD
 	max-width: 95%;
 	max-height: 100vh;
+=======
+	max-width: 80%;
+	max-height: 80vh;
+>>>>>>> 3994ce04f916a920bfc77d9d73aaf8e0985863ae
 	padding: 0 2vw 2vh 2vw;
 	overflow-x: scroll;
 }
