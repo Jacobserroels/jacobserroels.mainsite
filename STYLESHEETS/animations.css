@@ -1,4 +1,6 @@
-
+#pageOneHeader{
+	animation: title 3s ease-in-out;
+}
 @keyframes title {
 	0% {
 		transform: translateY(12vh);

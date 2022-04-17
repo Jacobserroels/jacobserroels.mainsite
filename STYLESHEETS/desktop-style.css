@@ -8,6 +8,10 @@ body > div{
 div > a {
 	margin-top: 4vh;
 	position: relative;
+	left: 20vw;
+}
+#portfolioButton > a{
+	left: -20vw;
 	right: 20vw;
 }
 #pageOneHeader{
@@ -20,10 +24,9 @@ div > a {
 	inline-size: 50vw;
 	display: grid;
 	place-content: center;
-	animation: title 3s ease-in-out;
 }
 #pageOneBody{
-	max-width: 45vw;
+	max-width: 40vw;
 	max-height: 50vh;
 	margin: min(20px,1vh) auto;
 	display: grid;
@@ -76,6 +79,45 @@ div > a {
 	margin-left: 15vw;
 	margin-top: -14.5vw;
 }
+/*Applied Design Style*/
+#pageThreeHeader > img{
+	margin-top: 8vh;
+	inline-size: 50vw;
+	display: grid;
+	place-content: center;
+}
+#pageThreeBody{
+	max-width: 40vw;
+	max-height: 50vh;
+	margin: min(20px,1vh) auto;
+	display: grid;
+	grid-auto-flow: row;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > p {
+	background-color: var(--darkColor);
+	color: var(--lightColor);
+	padding: 2vw;
+	border-radius: 2vw;
+	grid-auto-flow: row;
+	margin: 3vw 0;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > div{
+	display: grid;
+	grid-auto-flow: column;
+	place-content: center;
+	text-align: center;
+}
+#pageThreeBody > div > div{
+	background-color: var(--darkColor);
+	color: var(--lightColor);
+	padding: 2vw;
+	margin: 0.5vw;
+	border-radius: 2vw;
+}
 /*Portfolio Page Styling*/
 #portfolioHeader > img{
 	margin-top: 4vh;
@@ -88,7 +130,7 @@ body > div > h3{
 	color: var(--darkColor);
 	margin: 3vh 5vw
 }
-.portfolioContent{
+.portfolioBody{
 	margin-top: 5vh;
 }
 #scrollNav{
