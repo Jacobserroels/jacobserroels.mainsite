@@ -145,7 +145,7 @@ div > a {
 	display: grid;
 	place-content: center;
 }
-body > div > h3{
+body > div > h3 {
 	font-size: var(--step-0);
 	color: var(--darkColor);
 	margin: 1vh 5vw 1vh
