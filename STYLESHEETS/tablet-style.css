@@ -148,7 +148,7 @@ div > a {
 body > div > h3{
 	font-size: var(--step-0);
 	color: var(--darkColor);
-	margin: 0vh 5vw 0
+	margin: 1vh 5vw 1vh
 }
 .portfolioBody{
 	margin-top: 2vh;
