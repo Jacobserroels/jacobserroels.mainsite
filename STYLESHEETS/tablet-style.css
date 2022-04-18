@@ -1,5 +1,6 @@
 /*General Syling*/
 body{
+	margin-bottom: 25px;
 }
 body > div{
 	display: grid;

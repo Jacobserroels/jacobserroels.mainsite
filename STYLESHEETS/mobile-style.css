@@ -1,13 +1,13 @@
 /*General Syling*/
 body{
 	overflow:hidden;
+	margin-bottom: 25px;
 }
 body > div{
 	display: grid;
 	grid-auto-flow: column;
 	place-content: center;
 }
-<<<<<<< HEAD
 .modalBody,.modalItemHeader{
 	font-size:clamp(15px,var(--step--2),var(--step--1));
 	line-height:clamp(15px,var(--step--2),var(--step--1));
@@ -17,8 +17,6 @@ body > div{
 	line-height:clamp(25px,var(--step--1),var(--step-0));
 	padding-top: 1vh;
 }
-=======
->>>>>>> 3994ce04f916a920bfc77d9d73aaf8e0985863ae
 /*Page One Syling*/
 div > a {
 	margin-top: 2.5vh;
@@ -229,22 +227,16 @@ background: linear-gradient(90deg, rgba(125,166,227,1) 0%, rgba(2,0,36,1) 100%);
 	grid-column: 23%;
 }
 #cardWrapper > div{
-<<<<<<< HEAD
 	inline-size: 73vw;
-=======
 	inline-size: 53vw;
->>>>>>> 3994ce04f916a920bfc77d9d73aaf8e0985863ae
 	color: var(--lightColor);
 	display: grid;
 	place-items:center;
 	text-align: center;
 	padding: 2em;
 	border-radius: 0.5em;
-<<<<<<< HEAD
 	height: 35vh;
-=======
 	height: 55vh;
->>>>>>> 3994ce04f916a920bfc77d9d73aaf8e0985863ae
 	overflow: hidden;
 	border: 2.5px solid var(--darkColor);
 }
