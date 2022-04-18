@@ -128,10 +128,10 @@ div > a {
 body > div > h3{
 	font-size: var(--step-0);
 	color: var(--darkColor);
-	margin: 3vh 5vw 0
+	margin: 5vh 5vw 0
 }
 .portfolioBody{
-	margin-top: calc(3vh/2vw);
+	margin-top: calc(1vh/2vw);
 }
 #scrollNav{
 	display: grid;
