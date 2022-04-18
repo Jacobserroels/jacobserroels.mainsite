@@ -1,7 +1,7 @@
 /*General Syling*/
 body{
 	overflow:hidden;
-	margin-bottom: 25px;
+	margin-bottom: 15vh;
 }
 body > div{
 	display: grid;
