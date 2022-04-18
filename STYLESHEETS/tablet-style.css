@@ -148,7 +148,7 @@ div > a {
 body > div > h3{
 	font-size: var(--step-0);
 	color: var(--darkColor);
-	margin: 3vh 5vw
+	margin: 3vh 5vw 0
 }
 .portfolioBody{
 	margin-top: 5vh;
@@ -186,7 +186,7 @@ background: linear-gradient(90deg, rgba(125,166,227,1) 0%, rgba(2,0,36,1) 100%);
 }
 
 #cardWrapper {
-	margin-top: 2vh;
+	margin-top: 1vh;
 	position: fixed;	
 	display: grid;
 	grid-auto-flow: column;
