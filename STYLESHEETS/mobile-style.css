@@ -80,7 +80,7 @@ div > a {
 	grid-auto-flow: row;
 	max-width: 75vw;
 	max-height: 80vh;
-	margin: 12.5vh auto;
+	margin: max(1px,1vmin) auto;
 }
 #pageTwoBody > p{
 	display: grid;
