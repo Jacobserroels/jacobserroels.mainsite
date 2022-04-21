@@ -30,11 +30,7 @@ html, body{
 }
 body{
 	background-color: var(--lightColor);
-	overflow: hidden;
-	/*background-image:
-      repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
-      repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
-    background-size: 71px 71px;*/
+	overflow: hidden; 
 }
 h1{
 	font-size: var(--step-5);

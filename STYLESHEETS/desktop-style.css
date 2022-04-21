@@ -97,8 +97,7 @@ div > a {
 	text-align: center;
 }
 #pageThreeBody > p {
-	background-color: var(--darkColor);
-	color: var(--lightColor);
+	color: var(--darkColor);
 	padding: 2vw;
 	border-radius: 2vw;
 	grid-auto-flow: row;
@@ -113,8 +112,8 @@ div > a {
 	text-align: center;
 }
 #pageThreeBody > div > div{
-	background-color: var(--darkColor);
-	color: var(--lightColor);
+	
+	color: var(--darkColor);
 	padding: 2vw;
 	margin: 0.5vw;
 	border-radius: 2vw;
