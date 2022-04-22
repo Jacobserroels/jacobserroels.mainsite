@@ -19,12 +19,12 @@ function gridHandler(){
 	if(gridQuerey == null){
 		console.log('loading main page');
 		sessionStorage.setItem('gridSetting', 1);
-		window.location.assign = "http://test.jacobserroels.com";
+		window.location = "http://test.jacobserroels.com";
 	}
 	else if(gridQuerey == 0){
 		console.log('loading main page');
 		sessionStorage.setItem('gridSetting', 1);
-		window.location.assign = "http://test.jacobserroels.com";
+		window.location = "http://test.jacobserroels.com";
 	}
 	
 }
