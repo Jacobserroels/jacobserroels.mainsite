@@ -7,7 +7,7 @@ var getPage = window.location.href;
 var gridQuerey = sessionStorage.getItem('gridSetting');
 
 if(gridQuerey == 1){
-	body.style.backgroundImage = "linear-gradient(to right, var(--darkColor) 1px, transparent 1px), linear-gradient(to bottom, var(--darkColor) 1px, transparent 1px)"
+	body.style.backgroundImage = "linear-gradient(to right, #D1CECB 1px, transparent 1px), linear-gradient(to bottom, #D1CECB 1px, transparent 1px)"
 	body.style.backgroundSize = "40px 40px";
 	}
 
