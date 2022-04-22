@@ -17,14 +17,14 @@ if (getPage == "test.jacobserroels.com/applied-design"); {
 
 function gridHandler(){
 	if(gridQuerey == null){
-		console.log('loading main page');
 		sessionStorage.setItem('gridSetting', 1);
 		window.location.replace('http://test.jacobserroels.com');
 	}
 	else if(gridQuerey == 0){
-		console.log('loading main page');
 		sessionStorage.setItem('gridSetting', 1);
 		window.location.replace('http://test.jacobserroels.com');
 	}
-	
+	else if(gridQuerey == 1){
+		sessionStorage.setItem('gridSetting', 1);
+	}
 }
