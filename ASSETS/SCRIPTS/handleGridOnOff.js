@@ -1,7 +1,7 @@
 // JavaScript Document
 
 var gridOnOff = document.getElementById("gridButton");
-var head = document.getElementsByTagName('head')[0];
+var body = document.getElementsByTagName('body')[0];
 
 localStorage.setItem('gridSetting',0)
 var gridQuerey = localStorage.getItem('gridSetting')
@@ -10,10 +10,8 @@ var gridQuerey = localStorage.getItem('gridSetting')
 gridOnOff.addEventListener("click", gridHandler);
 
 if(gridQuerey == 1){
-		var cssGrid = document.createElement('link');
-		cssGrid.rel = "stylesheet";
-		cssGrid.href = 'STYLESHEETS/grid-css.css';
-		head.appendChild(cssGrid);
+	body.style.backgroundImage = "linear-gradient(to right, var(--darkColor) 1px, transparent 1px), linear-gradient(to bottom, var(--darkColor) 1px, transparent 1px)"
+	body.style.backgroundSize = "40px 40px";
 	}
 
 function gridHandler(){
