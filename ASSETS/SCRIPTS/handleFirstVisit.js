@@ -2,7 +2,6 @@
 
 
 
-localStorage.setItem('hasVisted',0);
 var firstVisitQuerey = localStorage.getItem('hasVisted');
 
 if (firstVisitQuerey == null){
