@@ -5,7 +5,6 @@ var body = document.getElementsByTagName('body')[0];
 var getPage = window.location.href;
 
 var gridQuerey = sessionStorage.getItem('gridSetting');
-sessionStorage.setItem('gridSetting', 1);
 
 if(gridQuerey == 1){
 	body.style.backgroundImage = "linear-gradient(to right, var(--darkColor) 1px, transparent 1px), linear-gradient(to bottom, var(--darkColor) 1px, transparent 1px)"
