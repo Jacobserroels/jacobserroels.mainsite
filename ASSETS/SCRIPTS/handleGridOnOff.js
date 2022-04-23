@@ -3,6 +3,7 @@
 var gridOnOff = document.getElementById("gridButton");
 var body = document.getElementsByTagName('body')[0];
 var getPage = window.location.href;
+
 console.log(getPage);
 
 var gridQuerey = sessionStorage.getItem('gridSetting');
@@ -13,7 +14,8 @@ if(gridQuerey == 1){
 	}
 
 if (getPage == "http://test.jacobserroels.com/applied-design") {
-	gridOnOff.addEventListener("click", gridHandler);
+	setTimeout(addGridButton(),1000);
+	console.log('adding button')
 }
 else if (getPage != "http://test.jacobserroels.com/applied-design"){
 	console.log('Not adding button')
@@ -31,4 +33,8 @@ function gridHandler(){
 	else if(gridQuerey == 1){
 		sessionStorage.setItem('gridSetting', 1);
 	}
+}
+
+function addGridButton() {
+	gridOnOff.addEventListener("click", gridHandler);
 }
