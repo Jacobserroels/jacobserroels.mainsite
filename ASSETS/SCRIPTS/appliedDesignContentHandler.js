@@ -5,29 +5,57 @@ var gridQuerey = sessionStorage.getItem('gridSetting');
 var body = document.getElementsByTagName('body')[0];
 var bodyText = document.createElement('p')
 var gridToggle = document.createElement('a')
+var bodyWrapper = document.createElement('div');
+var buttonWrapper = document.createElement('div');
+var portfoloioButton = document.createElement('a');
 
 if(gridQuerey == null){
-	bodyText.createTextNode("design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>")
+	bodyText.innerHTML = "design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>"
 	
 	gridToggle.setAttribute('id','gridButton');
-	gridToggle.createTextNode("view again with grids on");
+	gridToggle.textContent = "view again with grids on";
 	bodyText.appendChild(gridToggle);
 	
-	body.appendChild(bodyText);
+	bodyWrapper.setAttribute('id','pageThreeBody');
+	bodyWrapper.appendChild(bodyText);
+	body.appendChild(bodyWrapper);
+	
+	portfoloioButton.href = 'portfolio';
+	portfoloioButton.innerHTML = "continue to portfolio";
+	buttonWrapper.appendChild(portfoloioButton);
+	body.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 0){
-	bodyText.createTextNode("design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>")
+	bodyText.innerHTML = "design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>"
 	
 	gridToggle.setAttribute('id','gridButton');
-	gridToggle.createTextNode("view again with grids on");
+	gridToggle.textContent = "view again with grids on";
 	bodyText.appendChild(gridToggle);
 	
-	body.appendChild(bodyText);
+	bodyWrapper.setAttribute('id','pageThreeBody');
+	bodyWrapper.appendChild(bodyText);
+	body.appendChild(bodyWrapper);
+	
+	portfoloioButton.href = 'portfolio';
+	portfoloioButton.innerHTML = "continue to portfolio";
+	buttonWrapper.appendChild(portfoloioButton);
+	body.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 1){
-	bodyText.createTextNode("Hamburger")
+	bodyText.innerHTML = "Hamburger"
 	
 	gridToggle.setAttribute('id','gridButton');
-	gridToggle.createTextNode("view again with grids off");
+	gridToggle.textContent = "view again with grids off";
 	bodyText.appendChild(gridToggle);
+	
+	bodyWrapper.setAttribute('id','pageThreeBody');
+	bodyWrapper.appendChild(bodyText);
+	body.appendChild(bodyWrapper);
+	
+	portfoloioButton.href = 'portfolio';
+	portfoloioButton.innerHTML = "continue to portfolio";
+	buttonWrapper.appendChild(portfoloioButton);
+	body.appendChild(buttonWrapper);
+	
+	
 }
