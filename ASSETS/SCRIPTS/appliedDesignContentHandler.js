@@ -10,7 +10,6 @@ var buttonWrapper = document.createElement('div');
 var portfoloioButton = document.createElement('a');
 
 if(gridQuerey == null){
-	bodyText.innerHTML = "design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>"
 	
 	gridToggle.setAttribute('id','gridButton');
 	gridToggle.innerHTML = "view again with grids on";
@@ -26,7 +25,6 @@ if(gridQuerey == null){
 	body.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 0){
-	bodyText.innerHTML = "design is art applied to a problem, when you subject that art to guides, formulas, and overbearing systems it becomes stale, it looses it's artistic roots and becomes disconnected from the people it is meant to help.<br><br>with that in mind, this website was designed without a grid or system in mind, but instead was designed around a feel and with the consumers of the website in mind.<br><br>did you notice? was it obvious that the placement of objects was more intentional than snapping items to a grid. if not, go back and look at it again with guides enabled.<br><br>"
 	
 	gridToggle.setAttribute('id','gridButton');
 	gridToggle.innerHTML = "view again with grids on";
@@ -42,7 +40,6 @@ else if(gridQuerey == 0){
 	body.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 1){
-	bodyText.innerHTML = "Hamburger"
 	
 	gridToggle.setAttribute('id','gridButton');
 	gridToggle.innerHTML = "view again with grids off";
