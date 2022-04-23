@@ -42,6 +42,7 @@ else if(gridQuerey == 0){
 	body.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 1){
+	bodyText.innerHTML = "Hamburger<br><br>";
 	
 	gridToggle.setAttribute('id','gridButton');
 	gridToggle.innerHTML = "view again with grids off";
