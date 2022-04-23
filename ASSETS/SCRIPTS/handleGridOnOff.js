@@ -11,7 +11,7 @@ if(gridQuerey == 1){
 	body.style.backgroundSize = "40px 40px";
 	}
 
-if (getPage == "test.jacobserroels.com/applied-design"); {
+if (getPage == "applied-design"); {
 	gridOnOff.addEventListener("click", gridHandler);
 }
 
