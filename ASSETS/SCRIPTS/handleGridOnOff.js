@@ -31,7 +31,8 @@ function gridHandler(){
 		window.location.replace('http://test.jacobserroels.com');
 	}
 	else if(gridQuerey == 1){
-		sessionStorage.setItem('gridSetting', 1);
+		sessionStorage.setItem('gridSetting', 0);
+		window.location.replace('http://test.jacobserroels.com');
 	}
 }
 
