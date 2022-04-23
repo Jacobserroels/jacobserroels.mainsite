@@ -12,7 +12,7 @@ if(gridQuerey == 1){
 	}
 
 if (getPage == "test.jacobserroels.com/applied-design"); {
-	//gridOnOff.addEventListener("click", gridHandler);
+	gridOnOff.addEventListener("click", gridHandler);
 }
 
 function gridHandler(){
