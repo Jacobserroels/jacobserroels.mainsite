@@ -129,29 +129,35 @@ div > a {
 }
 /*Applied Design Style*/
 #pageThreeHeader > img{
+	position: static;
 	margin-top: 8vh;
 	inline-size: 50vw;
 	display: grid;
 	place-content: center;
 }
 #pageThreeBody{
-	max-width: 40vw;
-	max-height: 50vh;
-	margin: min(20px,1vh) auto;
+	position: static;
+	max-width: 80vw;
+	max-height: 20vh;
+	margin: clamp(160px,25%,250px) 50%;
 	display: grid;
 	grid-auto-flow: row;
 	place-content: center;
 	text-align: center;
 }
 #pageThreeBody > p {
-	background-color: var(--darkColor);
-	color: var(--lightColor);
+	position: static;
+	color: var(--darkColor);
+	width: 80vw;
 	padding: 2vw;
 	border-radius: 2vw;
-	grid-auto-flow: row;
+	grid-auto-flow: column;
 	margin: 3vw 0;
 	place-content: center;
 	text-align: center;
+	font-size:clamp(15px,var(--step--2),var(--step--1));
+	line-height: 15px;
+	font-weight: 100;
 }
 #pageThreeBody > div{
 	display: grid;
@@ -160,8 +166,8 @@ div > a {
 	text-align: center;
 }
 #pageThreeBody > div > div{
-	background-color: var(--darkColor);
-	color: var(--lightColor);
+	
+	color: var(--darkColor);
 	padding: 2vw;
 	margin: 0.5vw;
 	border-radius: 2vw;
