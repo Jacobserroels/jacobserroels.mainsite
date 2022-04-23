@@ -11,8 +11,11 @@ if(gridQuerey == 1){
 	body.style.backgroundSize = "40px 40px";
 	}
 
-if (getPage == "applied-design"); {
+if (getPage == "test.jacobserroels.com/applied-design") {
 	gridOnOff.addEventListener("click", gridHandler);
+}
+else if (getPage != "test.jacobserroels.com/applied-design"){
+	console.log('Not adding button')
 }
 
 function gridHandler(){
