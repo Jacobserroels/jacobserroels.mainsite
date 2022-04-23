@@ -119,9 +119,9 @@ a:hover{
 	z-index: 50;
 	background: #EBE8E4;
 	width: 80vw;
-	height: 75vh;
+	height: 60vh;
 	max-width: 80vw;
-	max-height: 75vh;
+	max-height: 60vh;
 	padding: 0 2vw 2vh 2vw;
 	overflow-x: scroll;
 }
