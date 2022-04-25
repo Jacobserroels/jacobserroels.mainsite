@@ -109,6 +109,9 @@ function createModal(project){
 					itemTitle.classList.add("modalItemHeader");
 					itemWrapper.appendChild(itemTitle);
 					//Decide content kind
+					// 0 = Vimeo Video
+					// 1 = Standalone Photo
+					// 2 = Photo Gallery
 					if (projectItems.itemKind == 1){createPhotoElement(projectItems.itemLink,projectItems.itemTitle,itemWrapper,projectItems.wrapperStyle)}
 					else if (projectItems.itemKind == 2){createPhotoGalleryElement(projectItems.itemLink,projectItems.itemTitle,itemWrapper,projectItems.wrapperStyle)}
 					else {createVimeoElement(projectItems.itemLink,itemWrapper,projectItems.wrapperStyle)}
@@ -153,11 +156,33 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 		imgWrapper.appendChild(img);
 }
 
-function createPhotoGalleryElement(link,alt,itemWrapper,aspect){}
+function createPhotoGalleryElement(itemLink,alt,itemWrapper,aspect){
+	var wrapper = document.createElement("div");
+		wrapper.classList.add("portfolioDropboxController");
+	var embed = document.createElement("a");
+	// Creating the settings for dropbox embed
+	var options = {
+      // Shared link to Dropbox file
+      link: itemLink,
+      file: {
+        // Sets the zoom mode for embedded files. Defaults to 'best'.
+        zoom: "best" // or "fit"
+      },
+      folder: {
+        // Sets the view mode for embedded folders. Defaults to 'list'.
+        view: "grid", // or "list"
+        headerSize: "small" // or "normal"
+      }
+    }
+	// Embedding the element
+    Dropbox.embed(options, embed);
+	wrapper.appendChild(embed);
+	itemWrapper.appendChild(wrapper);
+}
 
-const overlay = document.getElementById('overlay');
+var overlay = document.getElementById('overlay');
 var bodyOfWork = new XMLHttpRequest();
-bodyOfWork.open('GET', "https://api.jsonbin.io/b/623ebc210618276743800217", true);
+bodyOfWork.open('GET', "https://api.jsonbin.io/b/623ebc210618276743800217", false);
 bodyOfWork.onload = function()
   { 
 	var allProjects=JSON.parse(bodyOfWork.responseText);
