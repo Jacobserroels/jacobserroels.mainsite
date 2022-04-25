@@ -110,6 +110,7 @@ function createModal(project){
 					itemWrapper.appendChild(itemTitle);
 					//Decide content kind
 					if (projectItems.itemKind == 1){createPhotoElement(projectItems.itemLink,projectItems.itemTitle,itemWrapper,projectItems.wrapperStyle)}
+					else if (projectItems.itemKind == 2){createPhotoGalleryElement(projectItems.itemLink,projectItems.itemTitle,itemWrapper,projectItems.wrapperStyle)}
 					else {createVimeoElement(projectItems.itemLink,itemWrapper,projectItems.wrapperStyle)}
 					//Creating item description
 					var itemSummary = document.createElement("div");
@@ -151,6 +152,8 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 		wrapper.appendChild(imgWrapper)
 		imgWrapper.appendChild(img);
 }
+
+function createPhotoGalleryElement(link,alt,itemWrapper,aspect){}
 
 const overlay = document.getElementById('overlay');
 var bodyOfWork = new XMLHttpRequest();
