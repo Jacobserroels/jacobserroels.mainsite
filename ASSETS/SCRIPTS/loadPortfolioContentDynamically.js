@@ -182,7 +182,7 @@ function createPhotoGalleryElement(itemLink,alt,itemWrapper,aspect){
 
 var overlay = document.getElementById('overlay');
 var bodyOfWork = new XMLHttpRequest();
-bodyOfWork.open('GET', "https://api.jsonbin.io/b/6266f33e019db4679691927b/latest", false);
+bodyOfWork.open('GET', "https://api.jsonbin.io/b/6266f6b0019db467969193ae/latest", false);
 bodyOfWork.onload = function()
   { 
 	var allProjects=JSON.parse(bodyOfWork.responseText);
