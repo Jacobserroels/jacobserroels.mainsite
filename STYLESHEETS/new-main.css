@@ -89,6 +89,14 @@ a:hover{
 .portfolioDropboxController{
 	display: grid;
 	place-content: center;
+	width: 95%;
+	height: 25%;
+}
+.portfolioDropboxController > div {
+	display: grid;
+	place-content: center;
+	width: 95%;
+	height: 25%;
 }
 .openingParagraph{
 	font-weight: 100;
