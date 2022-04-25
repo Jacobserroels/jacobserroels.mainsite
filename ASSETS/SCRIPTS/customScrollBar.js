@@ -20,7 +20,6 @@ function moveBar(scrollPos) {
 	var scrollPosNormal = Math.min(Math.max(scrollPos/5, 0), 100);
 	var scrollPosCalc = scrollPos*360 /divWidth;
 	bar.style.backgroundPosition = scrollPosNormal+"%";
-	console.log(scrollPos)
 }
 
 function scrollLeft(){
