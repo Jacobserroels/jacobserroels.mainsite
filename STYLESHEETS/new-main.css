@@ -86,7 +86,7 @@ a:hover{
 	overflow: hidden;
 	transform: translateZ(0)
 }
-.portfolioDropboxController > a {
+.portfolioDropboxController > * {
 	display: grid;
 	place-content: center;
 	background: yellow;
