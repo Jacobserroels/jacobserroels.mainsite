@@ -86,22 +86,12 @@ a:hover{
 	overflow: hidden;
 	transform: translateZ(0)
 }
-/*.portfolioDropboxController{
-	width: 85vw;
-	height: 50vh;
-	display: grid;
-	place-content: center;
+.portfolioDropboxController{
+
 }
 .portfolioDropboxController > a, .portfolioDropboxController > a > iframe {
-	position: relative;
-	left: -25%;
-	display: grid;
-	place-content: center;
-	height: 100%;
-  	width: 100%;
-	margin: 0 auto;
-	padding: 0;
-}*/
+	height: 55vh;
+}
 .openingParagraph{
 	font-weight: 100;
 	margin: 3.5vmax 1vmax 0;
