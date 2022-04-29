@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "dropbox": "^10.28.0"
+  }
+}

@@ -90,7 +90,8 @@ a:hover{
 
 }
 .portfolioDropboxController > a, .portfolioDropboxController > a > iframe {
-	height: 55vh;
+	display: grid;
+	align-items: center;
 }
 .openingParagraph{
 	font-weight: 100;
