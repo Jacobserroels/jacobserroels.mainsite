@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "dropbox": "^10.28.0"
+    "dropbox": "^10.28.0",
+    "node-fetch": "^2.6.7"
   }
 }
