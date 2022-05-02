@@ -170,16 +170,15 @@ function dbxFileCall(_itemLink) {
 
 	var params = JSON.stringify({"path":''});
 
-	var items = fetch('https://api.dropboxapi.com/2/files/list_folder', {
-		method: 'POST',
-		body: params,
-		headers: headers,
-	}).then(response => response.json())
-	.then(data => {
-		console.log(data.entries)
-		return data.entries
-	})
-	setTimeout(function(){console.log(items)},1000)
+	async function dbxSendFetchRequest(){
+		var response = await fetch('https://api.dropboxapi.com/2/files/list_folder', {
+				method: 'POST',
+				body: params,
+				headers: headers,
+		});
+		var data = await.response.json();
+		console.log(data);
+	}
 }
 
 var overlay = document.getElementById('overlay');
