@@ -157,13 +157,14 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 }
 
 function createPhotoGalleryElement(itemLink){
-	dbxFileCall(itemLink)
+	response = dbxFileCall(itemLink)
+	setTimeout(function(){console.log(response)},1000)
 }
 
 function dbxFileCall(_itemLink) {
 
 	var headers = {
-	'Authorization': "Bearer sl.BG0XgyZguBSkl0LtaglCR7x04Tv6bmEXkpSwxBegQPPLRT4vvOgKk1nst3dfR4lL-UOpjBfsYIywoMPxutQm6dbkp1AjscR7QkDjXwRqEw2uAHcVnxMyTvIOInVBoL94uh8rjLna7nAH",
+	'Authorization': "Bearer sl.BG0rdfuGQSmNV_IkQNkadxbVtiYgwTxT2eEROfm4IRoqOewsE7DfMt37ooNNm76LqC80CCYnatck16xvhNZDcVyntePxDO65ppe2ftGS4PZsiC1Ed1kqTJ32XHRWCXY42SKIQWTIAt2F",
 	'Content-Type': "application/json",
 	'User-Agent': 'api-explorer-client'
 	};
@@ -178,8 +179,11 @@ function dbxFileCall(_itemLink) {
 		});
 		var data = await response.json();
 		console.log(data);
+		return data
 	}
 	dbxSendFetchRequest()
+	dbxReturnData = dbxSendFetchRequest()
+	return dbxReturnData
 }
 
 var overlay = document.getElementById('overlay');
