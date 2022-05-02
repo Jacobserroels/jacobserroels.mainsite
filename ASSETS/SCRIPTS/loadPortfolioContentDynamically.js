@@ -164,7 +164,7 @@ function createPhotoGalleryElement(itemLink){
 function dbxFileCall(_itemLink) {
 
 	var headers = {
-	'Authorization': "Bearer sl.BG0rdfuGQSmNV_IkQNkadxbVtiYgwTxT2eEROfm4IRoqOewsE7DfMt37ooNNm76LqC80CCYnatck16xvhNZDcVyntePxDO65ppe2ftGS4PZsiC1Ed1kqTJ32XHRWCXY42SKIQWTIAt2F",
+	'Authorization': "Bearer sl.BG1obQ1hsw_dA6qXGEXDY0_L7GudQfW8I5TyZExxR3iBp69A9Ls3oQcPViDESdxxadbh2_ayvNJBZcabZDlfDHUM4iW3wJxP4UG73tmxDEm8cMRORzI32-F7timF7H2vhftOT8U",
 	'Content-Type': "application/json",
 	'User-Agent': 'api-explorer-client'
 	};
