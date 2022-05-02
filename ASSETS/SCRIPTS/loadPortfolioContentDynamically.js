@@ -163,7 +163,7 @@ function createPhotoGalleryElement(itemLink){
 function dbxFileCall(_itemLink) {
 
 	var headers = {
-	'Authorization': "Bearer sl.BG31IAc-35_ner2zcuNfgf4OCzXz8rhqrwuhd3k-nSQGDwGhFVHZ6zAhbe63leiioYK89QFjqyXXqS6d3l9Ak0op-jfj7oZ5Pi5U83ByYoeXyE_273Q8JKvfWSodGNqrOtB_gnqN",
+	'Authorization': "Bearer sl.BG0XgyZguBSkl0LtaglCR7x04Tv6bmEXkpSwxBegQPPLRT4vvOgKk1nst3dfR4lL-UOpjBfsYIywoMPxutQm6dbkp1AjscR7QkDjXwRqEw2uAHcVnxMyTvIOInVBoL94uh8rjLna7nAH",
 	'Content-Type': "application/json",
 	'User-Agent': 'api-explorer-client'
 	};
@@ -176,9 +176,10 @@ function dbxFileCall(_itemLink) {
 				body: params,
 				headers: headers,
 		});
-		var data = await.response.json();
+		var data = await response.json();
 		console.log(data);
 	}
+	dbxSendFetchRequest()
 }
 
 var overlay = document.getElementById('overlay');
