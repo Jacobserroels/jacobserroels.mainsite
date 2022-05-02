@@ -157,7 +157,29 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 }
 
 function createPhotoGalleryElement(itemLink){
-	
+	dbxFileCall(itemLink)
+}
+
+function dbxFileCall(_itemLink) {
+
+	var headers = {
+	'Authorization': "Bearer sl.BG31IAc-35_ner2zcuNfgf4OCzXz8rhqrwuhd3k-nSQGDwGhFVHZ6zAhbe63leiioYK89QFjqyXXqS6d3l9Ak0op-jfj7oZ5Pi5U83ByYoeXyE_273Q8JKvfWSodGNqrOtB_gnqN",
+	'Content-Type': "application/json",
+	'User-Agent': 'api-explorer-client'
+	};
+
+	var params = JSON.stringify({"path":''});
+
+	var items = fetch('https://api.dropboxapi.com/2/files/list_folder', {
+		method: 'POST',
+		body: params,
+		headers: headers,
+	}).then(response => response.json())
+	.then(data => {
+		console.log(data.entries)
+		return data.entries
+	})
+	setTimeout(function(){console.log(items)},1000)
 }
 
 var overlay = document.getElementById('overlay');
