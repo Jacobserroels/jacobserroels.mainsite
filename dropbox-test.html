@@ -3,33 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
-<script>
-var data = JSON.stringify({
-    "path": ""
-  });
-
-  var xhr = new XMLHttpRequest();
-  xhr.withCredentials = true;
-
-  xhr.addEventListener("readystatechange", function() {
-    if(this.readyState === 4) {
-      console.log(this.responseText);
-    }
-  });
-
-  xhr.open("POST", "https://api.dropboxapi.com/2/files/list_folder");
-  xhr.setRequestHeader("Authorization", "Bearer sl.BG08J12hsaouaNhgJ2W3hdSwziXyS_k_dEVdCXP4XktjF1s-Wc-EBthSCP__eu7M_SwDZ_OB0cgpZnyUp8azjM87niUxSGzw5MEIGfE-AYFrmetvvrv6g0X7Zr2NMi9H427zFxpYFB1I");
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.setRequestHeader("Dropbox-Api-Select-User", "");
-
-  xhr.send(data);
-</script>
+<script src="ASSETS/SCRIPTS/dropBoxRequests.js"></script>
 </head>
-
-<body>
-	
-
+<body></body>
 <h1>Jellow</h1>
-
 </body>
 </html>
