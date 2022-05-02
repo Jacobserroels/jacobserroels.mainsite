@@ -3,18 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <title>Untitled Document</title>
-<script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="83mzx3lpqirlxa4"></script>
+<script>
+  var data = JSON.stringify({
+    "path": ""
+  });
+
+  var xhr = new XMLHttpRequest();
+  xhr.withCredentials = true;
+
+  xhr.addEventListener("readystatechange", function() {
+    if(this.readyState === 4) {
+      console.log(this.responseText);
+    }
+  });
+
+  xhr.open("POST", "https://api.dropboxapi.com/2/files/list_folder");
+  xhr.setRequestHeader("Authorization", "Bearer sl.BG0kkvYwDHIhIpsji9I96YyJwt_EuE74S_Dg30fiPLmrmQnitsfPqQinurXjQC9uZhcgGsBMVZ7u_MVl1WMIGgYBiH5RlqQJNWHRFZoqRjswx28vXKrkF_OdHDsHUuxb0YyBkqE_");
+  xhr.setRequestHeader("Content-Type", "application/json");
+  xhr.setRequestHeader("Dropbox-Api-Select-User", "");
+
+  xhr.send(data);
+</script>
 </head>
 
 <body>
 	
 
-<a
-  href="https://www.dropbox.com/sh/hhzl3qf4wjrnchd/AAC05EkXwEPDTPe3Uvldti2sa?dl=0"
-  class="dropbox-embed"
-  data-height="50vh"
-  data-width="50vw"
-></a>
+<h1>Jellow</h1>
 
 </body>
 </html>
