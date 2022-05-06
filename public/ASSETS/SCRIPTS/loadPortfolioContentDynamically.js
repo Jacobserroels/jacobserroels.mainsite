@@ -158,32 +158,16 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 
 function createPhotoGalleryElement(itemLink){
 	response = dbxFileCall(itemLink)
-	setTimeout(function(){console.log(response)},1000)
+	//setTimeout(function(){console.log(response)},1000)
 }
 
-function dbxFileCall(_itemLink) {
+async function dbxFileCall(_itemLink) {
 
-	var headers = {
-	'Authorization': "Bearer sl.BG1obQ1hsw_dA6qXGEXDY0_L7GudQfW8I5TyZExxR3iBp69A9Ls3oQcPViDESdxxadbh2_ayvNJBZcabZDlfDHUM4iW3wJxP4UG73tmxDEm8cMRORzI32-F7timF7H2vhftOT8U",
-	'Content-Type': "application/json",
-	'User-Agent': 'api-explorer-client'
-	};
-
-	var params = JSON.stringify({"path":''});
-
-	async function dbxSendFetchRequest(){
-		var response = await fetch('https://api.dropboxapi.com/2/files/list_folder', {
-				method: 'POST',
-				body: params,
-				headers: headers,
-		});
-		var data = await response.json();
-		console.log(data);
-		return data
-	}
-	dbxSendFetchRequest()
-	dbxReturnData = dbxSendFetchRequest()
-	return dbxReturnData
+	
+	const response = await fetch("api.dropbox.com/2/files/list_folder?reject_cors_preflight=true&charset=dropbox-cors-hack&authorization=w1ruaomycon6aa1&", {
+		//method: 'POST'
+	})
+	console.log(response)
 }
 
 var overlay = document.getElementById('overlay');
