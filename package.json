@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "dropbox": "^10.28.0",
+    "cors": "^2.8.5",
+    "dropbox": "^10.29.0",
+    "express": "^4.18.1",
     "node-fetch": "^2.6.7"
   }
 }

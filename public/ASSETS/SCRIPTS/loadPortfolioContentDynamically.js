@@ -162,12 +162,7 @@ function createPhotoGalleryElement(itemLink){
 }
 
 async function dbxFileCall(_itemLink) {
-
-	
-	const response = await fetch("api.dropbox.com/2/files/list_folder?reject_cors_preflight=true&charset=dropbox-cors-hack&authorization=w1ruaomycon6aa1&", {
-		//method: 'POST'
-	})
-	console.log(response)
+	var response = fetch('').then
 }
 
 var overlay = document.getElementById('overlay');
