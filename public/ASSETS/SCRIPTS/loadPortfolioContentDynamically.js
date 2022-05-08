@@ -157,12 +157,8 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 }
 
 function createPhotoGalleryElement(itemLink){
-	response = dbxFileCall(itemLink)
-	//setTimeout(function(){console.log(response)},1000)
-}
-
-async function dbxFileCall(_itemLink) {
-	var response = fetch('').then
+	var dbxGrab = firebase.functions().httpsCallable('dbxPhotosJsonObj');
+	dbxGrab({item: itemLink}).then(result => {console.log(result.data)});
 }
 
 var overlay = document.getElementById('overlay');
