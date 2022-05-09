@@ -1,0 +1,28 @@
+   console.log(data);
+    const accessToken = "sl.BHMcO0Iiahv0CqLMYxwLcY31nfvEEnLPVR-YUert2Ptr-td_hmde7M8yHFERP1gPC6IDwp8DeKz7baaDpbOESAT3dJ9SbAhuuHr8xHXlJNxZAcVw9bjxZiy6dQDwWoZITvqUOdXj";
+    const dbxGetFile = new Dropbox({accessToken});
+    const itemLink = data.item;
+    dbxGetFile.filesListFolder({path: itemLink})
+        .then(function(response) {
+          new Promise(() => {
+            response.result.entries.forEach((item, index, array) => {
+              const dbxGetIMG = new Dropbox({accessToken});
+              dbxGetIMG.filesGetTemporaryLink({"path": item.path_lower})
+                  .then(function(IMGResponse) {
+                    jsonCatch.push( {"link": IMGResponse.result.link});
+                    if (index === array.length -1) resolve();
+                  }).catch(function(error) {
+                    console.log(error);
+                  });
+            });
+          });
+        }).catch(function(error) {
+          console.log(error);
+        });
+  }).then(function(resolve) {
+    setTimeout(() => {
+      console.log("sending data to front end with json data: " + jsonCatch);
+      return {data: jsonCatch};
+    }, 1500);
+  });
+});

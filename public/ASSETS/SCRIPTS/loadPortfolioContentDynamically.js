@@ -113,7 +113,7 @@ function createModal(project){
 					// 1 = Standalone Photo
 					// 2 = Photo Gallery
 					if (projectItems.itemKind == 1){createPhotoElement(projectItems.itemLink,projectItems.itemTitle,itemWrapper,projectItems.wrapperStyle)}
-					else if (projectItems.itemKind == 2){createPhotoGalleryElement(projectItems.itemLink)}
+					else if (projectItems.itemKind == 2){createPhotoGalleryElement(projectItems.itemLink, itemWrapper)}
 					else {createVimeoElement(projectItems.itemLink,itemWrapper,projectItems.wrapperStyle)}
 					//Creating item description
 					var itemSummary = document.createElement("div");
@@ -156,9 +156,24 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 		imgWrapper.appendChild(img);
 }
 
-function createPhotoGalleryElement(itemLink){
+function createPhotoGalleryElement(itemLink, itemWrapper){
+	var wrapper = document.createElement("div");
+	wrapper.classList.add("portfolioPhotoGalleryController");
 	var dbxGrab = firebase.functions().httpsCallable('dbxPhotosJsonObj');
-	dbxGrab({item: itemLink}).then(result => {console.log(result.data)});
+	dbxGrab({item: itemLink}).then(result => {
+		console.log(result);
+		result.forEach(()=> {
+			var img = parse.link;
+			var element = document.createElement('img');
+			
+			element.setAttribute("href",img)
+			element.setAttribute("alt","Image Pulled From Dropbox")
+
+			wrapper.appendChild(element);
+		})
+	}).then(()=> {
+		itemWrapper.appendChild(wrapper);
+	})
 }
 
 var overlay = document.getElementById('overlay');
