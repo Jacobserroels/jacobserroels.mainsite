@@ -11,12 +11,12 @@ if(gridQuerey == 1){
 	body.style.backgroundSize = "40px 40px";
 	}
 
-if (getPage == "http://jacobserroels.com/applied-design") {
+if (getPage == "https://jacobserroels.com/applied-design") {
 	console.log(getPage);
-	setTimeout(addGridButton(),500);
+	setTimeout(addGridButton(),100);
 	console.log('adding button');
 }
-else if (getPage != "http://jacobserroels.com/applied-design"){
+else if (getPage != "https://jacobserroels.com/applied-design"){
 	console.log(getPage);
 	console.log('Not adding button')
 }

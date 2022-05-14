@@ -54,7 +54,7 @@ function createModal(project){
 		modalWrapper.classList.add('modal');
 		//Adding active class to modal 
 		overlay.classList.add('active');
-		setTimeout(activeModal, 0.1)
+		setTimeout(activeModal, 200)
 		function activeModal(){modalWrapper.classList.add('active');}
 	
 		// Adding modal to the dom
@@ -157,22 +157,22 @@ function createPhotoElement(link,alt,itemWrapper,aspect){
 }
 
 function createPhotoGalleryElement(itemLink, itemWrapper){
-	var wrapper = document.createElement("div");
-	wrapper.classList.add("portfolioPhotoGalleryController");
-	var dbxGrab = firebase.functions().httpsCallable('dbxPhotosJsonObj');
-	dbxGrab({item: itemLink}).then(result => {
-		console.log(result);
-		result.forEach(()=> {
-			var img = parse.link;
-			var element = document.createElement('img');
-			
-			element.setAttribute("href",img)
-			element.setAttribute("alt","Image Pulled From Dropbox")
-
-			wrapper.appendChild(element);
+	var photosWrapper = document.createElement('div');
+	photosWrapper.classList.add("portfolioPhotoGalery");
+	itemWrapper.appendChild(photosWrapper);
+	photosWrapper.classList.add("portfolioPhotoGalleryController");
+	var cloudGrab = firebase.functions().httpsCallable('cloudinaryGetPhotoJson');
+	cloudGrab({item: itemLink}).then(result => {
+		console.log(result)
+		var loop = result.data
+		//photosWrapper.style.gridAutoFlow = "column"
+		loop.forEach((loop) => {
+			var link = loop.url;
+			var img = document.createElement('img');
+			img.setAttribute("src",link);
+			//img.style.backgroundImage = "url('"+link+"') no-repeat top center"
+			photosWrapper.appendChild(img);
 		})
-	}).then(()=> {
-		itemWrapper.appendChild(wrapper);
 	})
 }
 

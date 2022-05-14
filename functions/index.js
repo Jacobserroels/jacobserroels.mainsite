@@ -1,42 +1,25 @@
-const { response } = require("express");
+require("dotenv").config({path: __dirname + "/.env"});
 const functions = require("firebase-functions");
-const Dropbox = require("dropbox").Dropbox;
+const cloudinary = require("cloudinary").v2;
 
-exports.dbxPhotosJsonObj = functions.https.onCall((data) => {
-  return new Promise((resolve, reject) => {
-    dbxGetToken().then((accessToken) => {  
-    console.log(data);
-    const jsonCatch = [];
-    const dbxGetFile = new Dropbox({accessToken});
-    const itemLink = data.item;
-    dbxGetFile.filesListFolder({path: itemLink})
-        .then(function(response) {
-          response.result.entries.forEach((item, index, array) => {
-            const dbxGetIMG = new Dropbox({accessToken});
-            dbxGetIMG.filesGetTemporaryLink({"path": item.path_lower})
-                .then(function(IMGResponse) {
-                  jsonCatch.push( {"link": IMGResponse.result.link});
-                  if (index === array.length -1) {
-                    setTimeout(()=> {
-                      resolve(jsonCatch);
-                    }, 150);
-                  }
-                }).catch(function(reject) {
-                  console.log(reject);
-                });
-          });
+exports.cloudinaryGetPhotoJson = functions.https.onCall((data) => {
+  return new Promise((resolve, reject) =>{
+    cloudinary.config({
+      cloud_name: process.env.CLOUDINARY_NAME,
+      api_key: process.env.CLOUDINARY_KEY,
+      api_secret: process.env.CLOUDINARY_SECRET,
+    });
+    cloudinary.search
+        .expression(
+            `folder:jacobserroels.com/* AND tags=${JSON.stringify(data.item)}`
+        ).sort_by("public_id", "desc").max_results(100)
+        .execute().then((response)=>{
+          const jsonImgList = response.resources;
+          resolve(jsonImgList);
+        }).catch((error)=>{
+          console.log(error);
         });
-      });
-  }).catch(function(error) {
-    console.log(error);
+  }).catch((reject)=>{
+    console.log(reject);
   });
 });
-
-exports.dbxGetToken = functions.https.onRequest((req,res) => {
-  return new Promise((resolve, reject) => {
-  const thing = fetch('https://www.dropbox.com/oauth2/authorize?client_id=w1ruaomycon6aa1&response_type=code')
-  .then((response) => {
-  console.log(response)
-  })
-  })
-})

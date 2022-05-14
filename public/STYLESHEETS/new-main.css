@@ -86,12 +86,15 @@ a:hover{
 	overflow: hidden;
 	transform: translateZ(0)
 }
-.portfolioDropboxController{
+.portfolioPhotoGalery{
+	display: grid;
+	gap: 1.5vw;
+	grid-auto-rows: minmax(100px, auto);
+	grid-template-columns: repeat(3, 1fr);
 
 }
-.portfolioDropboxController > a, .portfolioDropboxController > a > iframe {
-	display: grid;
-	align-items: center;
+.portfolioPhotoGalery > img {
+	border-radius: 1vh;
 }
 .openingParagraph{
 	font-weight: 100;
