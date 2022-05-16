@@ -90,7 +90,7 @@ a:hover{
 	display: grid;
 	gap: 1.5vw;
 	grid-auto-rows: minmax(100px, auto);
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(3, 3fr);
 
 }
 .portfolioPhotoGalery > img {
@@ -128,9 +128,11 @@ a:hover{
 	border-radius: 0.5vw;
 	z-index: 50;
 	background: #EBE8E4;
-	width: 80vw;
-	height: 85vh;
-	max-width: 80vw;
+	width: 55vw;
+	min-height: 45vh;
+	/*width: 90vw;
+	height: 90vw;*/
+	max-width: 90vw;
 	max-height: 85vh;
 	padding: 0 2vw 2vh 2vw;
 	overflow-x: scroll;
@@ -202,4 +204,26 @@ a:hover{
 #cardWrapper{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+/*Controlling Card Text Active Not Active*/
+
+.cardHeaders{
+	opacity: 0%;
+	transition: opacity .50s ease-in-out;
+}
+
+.cardHeaders.active{
+	opacity: 100%;
+	transition: opacity .50s ease-in-out;
+}
+
+.contentItem > h2 {
+	opacity: 0%;
+	transition: opacity .50s ease-in-out;
+}
+
+.contentItem > h2.active{
+	opacity: 100%;
+	transition: opacity .50s ease-in-out;
 }

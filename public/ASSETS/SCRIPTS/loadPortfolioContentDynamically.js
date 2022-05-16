@@ -1,3 +1,4 @@
+
 function createSliderObjects(project){
 	// Finding slides wrapper
 	var wrapper = document.getElementById("cardWrapper");
@@ -22,24 +23,39 @@ function makeObject(header,object,newDiv){
 	headerTitle.innerHTML = header
 	headerTitle.classList.add("cardHeaders");
 	var headerText = document.createElement('h2');
+	headerText.classList.add("headerText");
 	headerText.innerHTML = object;
 	newDiv.appendChild(headerTitle);
 	//newDiv.appendChild(document.createElement("br"));
 	newDiv.appendChild(headerText);
 	//newDiv.appendChild(document.createElement("br"));
-} 
+}
 
 function makeImageObject(image,newDiv){
-	newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('"+image+"') no-repeat top center"
+	newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 100%), url('"+image+"') no-repeat top center"
+	var headers = newDiv.querySelectorAll('.cardHeaders')
+	var headerText = newDiv.querySelectorAll('.headerText')
 	
 	newDiv.addEventListener("mouseover",function() {
-		newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.9) 100%), url('"+image+"') no-repeat top center"
+		newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('"+image+"') no-repeat top center"
 		newDiv.style.backgroundSize = "cover"
+		headers.forEach((headers)=>{
+			headers.classList.add('active')
+		})
+		headerText.forEach((headerText)=>{
+			headerText.classList.add('active')
+		})
 	})
 	
 	newDiv.addEventListener("mouseout",function() {
-		newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('"+image+"') no-repeat top center"
+		newDiv.style.background = "linear-gradient(90deg, rgba(0,0,0,0.0) 0%, rgba(0,0,0,0.0) 100%), url('"+image+"') no-repeat top center"
 		newDiv.style.backgroundSize = "cover"	
+		headers.forEach((headers)=>{
+			headers.classList.remove('active')
+		})
+		headerText.forEach((headerText)=>{
+			headerText.classList.remove('active')
+		})
 	})
 	
 	newDiv.style.backgroundSize = "cover"
@@ -160,7 +176,6 @@ function createPhotoGalleryElement(itemLink, itemWrapper){
 	var photosWrapper = document.createElement('div');
 	photosWrapper.classList.add("portfolioPhotoGalery");
 	itemWrapper.appendChild(photosWrapper);
-	photosWrapper.classList.add("portfolioPhotoGalleryController");
 	var cloudGrab = firebase.functions().httpsCallable('cloudinaryGetPhotoJson');
 	cloudGrab({item: itemLink}).then(result => {
 		console.log(result)
@@ -168,8 +183,10 @@ function createPhotoGalleryElement(itemLink, itemWrapper){
 		//photosWrapper.style.gridAutoFlow = "column"
 		loop.forEach((loop) => {
 			var link = loop.url;
+			var charIndex = link.search('upload/') + 7
+			var qlink =	link.slice(0,charIndex) + 'q_20/' + link.slice(charIndex)
 			var img = document.createElement('img');
-			img.setAttribute("src",link);
+			img.setAttribute("src",qlink);
 			//img.style.backgroundImage = "url('"+link+"') no-repeat top center"
 			photosWrapper.appendChild(img);
 		})
