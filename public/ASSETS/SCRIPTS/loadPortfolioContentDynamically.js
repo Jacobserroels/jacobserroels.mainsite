@@ -70,6 +70,12 @@ function createModal(project){
 		modalWrapper.classList.add('modal');
 		//Adding active class to modal 
 		overlay.classList.add('active');
+		overlay.addEventListener('click', ()=>{
+			modalWrapper.classList.remove('active');
+			overlay.classList.remove('active');
+			setTimeout(killModal, 1000)
+			function killModal() {document.body.removeChild(modalWrapper);}
+		})
 		setTimeout(activeModal, 200)
 		function activeModal(){modalWrapper.classList.add('active');}
 	
