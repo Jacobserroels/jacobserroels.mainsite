@@ -42,7 +42,7 @@ else if(gridQuerey == 0){
 	bodyWrapper.appendChild(buttonWrapper);
 }
 else if(gridQuerey == 1){
-	bodyText.innerHTML = "If the changes weren't obvious to you, I would consider choosing me to do you design,<br><br>to see more of my work, click the continue to portfolio button <br><br>";
+	bodyText.innerHTML = "If the changes weren't obvious to you, Than one may begin to question the point of grids. And while they certainly have thier place, I prefer to design around feel. Making sure that the end output feels really great. Not that it looks 'perfect.'<br><br>to see more of my work, click the continue to portfolio button <br><br>";
 	
 	gridToggle.setAttribute('id','gridButton');
 	gridToggle.innerHTML = "view again with grids off";

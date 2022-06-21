@@ -128,8 +128,9 @@ a:hover{
 	border-radius: 0.5vw;
 	z-index: 50;
 	background: #EBE8E4;
-	width: 55vw;
-	min-height: 45vh;
+	min-width: 50vw;
+	width: 75vw;
+	min-height: 25vh;
 	/*width: 90vw;
 	height: 90vw;*/
 	max-width: 90vw;
